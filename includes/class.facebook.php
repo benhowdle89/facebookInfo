@@ -51,6 +51,7 @@ class Facebook {
 	}
 	
 	public function searchEvents($event){
+	
 		if($event !== ''){
 			$url = $this->baseUrl . 'search?q='.urlencode($event).'&type=event';
 		}
@@ -58,6 +59,7 @@ class Facebook {
 			$data = $this->__apiCall($url);
 		}
 		return $data;
+		
 	}
 	
 	private function __apiCall($url){
